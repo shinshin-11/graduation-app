@@ -1,3 +1,10 @@
-<div>
-<h1 class="text-4xl font-bold">3秒めきき</h1>
+<div class="flex flex-col items-center gap-6">
+  <h1 class="text-xl font-bold text-gray-800">売り場を選んでください</h1>
+
+  <nav class="flex w-full max-w-sm flex-col gap-4" aria-label="食材のカテゴリ">
+    <% @categories.each do |category| %>
+      <%= link_to category.name, category_path(category),
+            class: "block rounded-lg bg-emerald-700 px-6 py-5 text-center text-xl font-bold text-white shadow hover:bg-emerald-800 active:bg-emerald-900" %>
+    <% end %>
+  </nav>
 </div>
