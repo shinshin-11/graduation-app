@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :categories, only: [ :show ]
+  resources :foods, only: [ :show ]
 end
