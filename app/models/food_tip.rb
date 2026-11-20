@@ -8,6 +8,9 @@ class FoodTip < ApplicationRecord
   validates :description, presence: true
   validate :food_tips_limit
 
+  # 画面に並べる順番（登録した順）
+  scope :ordered, -> { order(:id) }
+
   private
 
     def food_tips_limit
