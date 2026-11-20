@@ -52,6 +52,9 @@ group :development, :test do
   # テストを書く道具（RSpec）と、テスト用データを作る道具（FactoryBot）
   gem "rspec-rails"
   gem "factory_bot_rails"
+
+  # N+1問題（無駄に多い問い合わせ）を検出する
+  gem "bullet"
 end
 
 group :development do
