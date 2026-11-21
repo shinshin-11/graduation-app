@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @categories = Category.order(:id)
+    @categories = Category.ordered
   end
 end
